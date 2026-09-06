@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Gestionnaire de notes scolaire développé avec Python et SQLAlchemy — Abdoulaye Diallo.">
+
+    <meta name="author" content="Abdoulaye Diallo">
+
+    <title>Gestionnaire de notes — Abdoulaye Diallo</title>
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="navbar" id="main-navigation" aria-label="Navigation principale">
+            <div class="navbar__container container">
+
+                <a href="../index.html" class="navbar__logo">
+                    AD
+                </a>
+
+                <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+                    aria-label="Ouvrir le menu">
+                    ☰
+                </button>
+
+                <div class="navbar__menu" id="primary-navigation">
+
+                    <a href="../index.html" class="navbar__link">Accueil</a>
+                    <a href="../pages/a-propos.html" class="navbar__link">À propos</a>
+                    <a href="../pages/services.html" class="navbar__link">Services</a>
+                    <a href="../pages/projets.html" class="navbar__link is-active">Projets</a>
+                    <a href="../pages/articles.html" class="navbar__link">Articles</a>
+                    <a href="../pages/contact.html" class="navbar__link">Contact</a>
+
+                    <a href="../assets/documents/CV.pdf" class="btn btn--small btn--primary" target="_blank"
+                        rel="noopener">
+                        Mon CV
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="section">
+            <div class="container">
+
+                <header class="section-header">
+                    <p class="section-header__eyebrow">
+                        Développement logiciel
+                    </p>
+
+                    <h1 class="section-header__title">
+                        Gestionnaire de notes
+                    </h1>
+
+                    <p class="section-header__description">
+                        Application desktop destinée à faciliter la gestion des
+                        élèves, des classes, des matières, des notes et des résultats
+                        scolaires.
+                    </p>
+                </header>
+
+                <div class="project-featured">
+
+                    <div class="project-featured__image">
+                        <img src="../assets/images/projects/gestionnaire_scolaire/gestion1.png"
+                            alt="Aperçu du gestionnaire de notes">
+                    </div>
+
+                    <div class="project-featured__content">
+
+                        <div class="project-card__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQLAlchemy</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Tkinter</span>
+                        </div>
+
+                        <h2>
+                            Numériser la gestion scolaire
+                        </h2>
+
+                        <p>
+                            L'application vise à centraliser les informations
+                            scolaires et à simplifier certaines opérations réalisées
+                            quotidiennement par l'administration d'un établissement.
+                        </p>
+
+                        <span class="badge">
+                            Projet en développement
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section section-highlight">
+            <div class="container">
+
+                <header class="section-header">
+                    <p class="section-header__eyebrow">Fonctionnalités</p>
+                    <h2 class="section-header__title">
+                        Une application pensée autour du besoin utilisateur
+                    </h2>
+                </header>
+
+                <div class="cards-grid cards-grid--3">
+
+                    <article class="service-card">
+                        <div class="service-card__icon">01</div>
+                        <h3 class="service-card__title">
+                            Gestion des élèves
+                        </h3>
+                        <p class="service-card__description">
+                            Enregistrer, rechercher et consulter les informations
+                            relatives aux élèves.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">02</div>
+                        <h3 class="service-card__title">
+                            Gestion des notes
+                        </h3>
+                        <p class="service-card__description">
+                            Saisir, modifier et consulter les notes associées aux
+                            différentes évaluations.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">03</div>
+                        <h3 class="service-card__title">
+                            Résultats
+                        </h3>
+                        <p class="service-card__description">
+                            Calculer les moyennes et faciliter la consultation des
+                            résultats scolaires.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">04</div>
+                        <h3 class="service-card__title">
+                            Gestion des classes
+                        </h3>
+                        <p class="service-card__description">
+                            Organiser les élèves au sein des différentes classes et
+                            niveaux.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">05</div>
+                        <h3 class="service-card__title">
+                            Base de données
+                        </h3>
+                        <p class="service-card__description">
+                            Structurer et persister les données à l'aide d'un modèle
+                            relationnel.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">06</div>
+                        <h3 class="service-card__title">
+                            Bulletins
+                        </h3>
+                        <p class="service-card__description">
+                            Préparer la génération de documents permettant de
+                            présenter les résultats.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <header class="section-header">
+                    <p class="section-header__eyebrow">Architecture technique</p>
+                    <h2 class="section-header__title">
+                        Une architecture structurée
+                    </h2>
+                </header>
+
+                <div class="exploring-grid">
+
+                    <article class="exploring-item">
+                        <h3>Python</h3>
+                        <p>
+                            Langage principal utilisé pour la logique de l'application.
+                        </p>
+                    </article>
+
+                    <article class="exploring-item">
+                        <h3>SQLAlchemy</h3>
+                        <p>
+                            ORM utilisé pour représenter et manipuler les données
+                            relationnelles.
+                        </p>
+                    </article>
+
+                    <article class="exploring-item">
+                        <h3>SQLite</h3>
+                        <p>
+                            Base de données locale destinée à la persistance des
+                            informations.
+                        </p>
+                    </article>
+
+                    <article class="exploring-item">
+                        <h3>MVC</h3>
+                        <p>
+                            Organisation du projet autour d'une séparation claire
+                            entre données, logique et interface.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section cta">
+            <div class="container cta__container">
+
+                <div>
+                    <p class="section-header__eyebrow">Projet suivant</p>
+                    <h2>Cryptographie classique</h2>
+                    <p>
+                        Découvrez mes expérimentations autour de plusieurs
+                        algorithmes cryptographiques.
+                    </p>
+                </div>
+
+                <a href="cryptographie.html" class="btn btn--primary">
+                    Voir le projet
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="site-footer__container container">
+
+            <div class="site-footer__brand">
+                <a href="../index.html" class="navbar__logo">
+                    AD
+                </a>
+                <p>
+                    Étudiant ingénieur en informatique spécialisé en
+                    Intelligence Artificielle.
+                </p>
+            </div>
+
+            <div class="site-footer__links">
+                <a href="../index.html">Accueil</a>
+                <a href="../pages/a-propos.html">À propos</a>
+                <a href="../pages/services.html">Services</a>
+                <a href="../pages/projets.html">Projets</a>
+                <a href="../pages/articles.html">Articles</a>
+                <a href="../pages/contact.html">Contact</a>
+            </div>
+
+            <div class="site-footer__socials">
+                <a href="https://github.com/engineerdiallo" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/engineer-diallo" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+                <a href="mailto:engineerdiallo@gmail.com">Email</a>
+            </div>
+
+        </div>
+
+        <div class="site-footer__bottom container">
+            <p>
+                © <span data-current-year></span>
+                Abdoulaye Diallo. Tous droits réservés.
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/projects.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

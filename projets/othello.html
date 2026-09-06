@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Projet Othello développé avec Minimax et élagage alpha-bêta — Abdoulaye Diallo.">
+    <meta name="author" content="Abdoulaye Diallo">
+
+    <title>Othello avec Minimax — Abdoulaye Diallo</title>
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="navbar" id="main-navigation" aria-label="Navigation principale">
+            <div class="navbar__container container">
+
+                <a href="../index.html" class="navbar__logo">
+                    AD
+                </a>
+
+                <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+                    aria-label="Ouvrir le menu">
+                    ☰
+                </button>
+
+                <div class="navbar__menu" id="primary-navigation">
+
+                    <a href="../index.html" class="navbar__link">Accueil</a>
+                    <a href="../pages/a-propos.html" class="navbar__link">À propos</a>
+                    <a href="../pages/services.html" class="navbar__link">Services</a>
+                    <a href="../pages/projets.html" class="navbar__link is-active">Projets</a>
+                    <a href="../pages/articles.html" class="navbar__link">Articles</a>
+                    <a href="../pages/contact.html" class="navbar__link">Contact</a>
+
+                    <a href="../assets/documents/CV.pdf" class="btn btn--small btn--primary" target="_blank"
+                        rel="noopener">
+                        Mon CV
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="section">
+            <div class="container">
+
+                <header class="section-header">
+                    <p class="section-header__eyebrow">
+                        Intelligence artificielle
+                    </p>
+
+                    <h1 class="section-header__title">
+                        Jeu Othello avec Minimax
+                    </h1>
+
+                    <p class="section-header__description">
+                        Implémentation d'un joueur artificiel capable de rechercher
+                        des coups et de prendre des décisions à l'aide de l'algorithme
+                        Minimax et de l'élagage alpha-bêta.
+                    </p>
+                </header>
+
+                <div class="project-featured">
+
+                    <div class="project-featured__image">
+                        <img src="../assets/images/projects/othello/othello1.png" alt="Aperçu du jeu Othello">
+                    </div>
+
+                    <div class="project-featured__content">
+
+                        <div class="project-card__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Minimax</span>
+                            <span class="tag">Alpha-bêta</span>
+                            <span class="tag">IA</span>
+                        </div>
+
+                        <h2>
+                            Faire jouer une intelligence artificielle
+                        </h2>
+
+                        <p>
+                            L'objectif est de construire un adversaire capable
+                            d'évaluer les différentes possibilités offertes par
+                            l'état courant du plateau et de choisir un coup pertinent.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section section-highlight">
+            <div class="container">
+
+                <header class="section-header">
+                    <p class="section-header__eyebrow">Approche</p>
+                    <h2 class="section-header__title">
+                        Recherche dans l'arbre des coups
+                    </h2>
+                </header>
+
+                <div class="cards-grid cards-grid--3">
+
+                    <article class="service-card">
+                        <div class="service-card__icon">01</div>
+                        <h3 class="service-card__title">
+                            Génération des coups
+                        </h3>
+                        <p class="service-card__description">
+                            Identifier les coups légaux disponibles à partir de
+                            l'état courant du plateau.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">02</div>
+                        <h3 class="service-card__title">
+                            Minimax
+                        </h3>
+                        <p class="service-card__description">
+                            Explorer plusieurs niveaux de décisions afin d'estimer
+                            les conséquences des différents coups.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">03</div>
+                        <h3 class="service-card__title">
+                            Alpha-bêta
+                        </h3>
+                        <p class="service-card__description">
+                            Réduire le nombre de branches explorées sans modifier
+                            le résultat de la recherche Minimax.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <header class="section-header">
+                    <p class="section-header__eyebrow">Compétences mobilisées</p>
+                    <h2 class="section-header__title">
+                        Algorithmique et conception
+                    </h2>
+                </header>
+
+                <div class="exploring-grid">
+
+                    <article class="exploring-item">
+                        <h3>Structures de données</h3>
+                        <p>
+                            Représentation et manipulation de l'état du plateau.
+                        </p>
+                    </article>
+
+                    <article class="exploring-item">
+                        <h3>Recherche arborescente</h3>
+                        <p>
+                            Exploration des états futurs possibles.
+                        </p>
+                    </article>
+
+                    <article class="exploring-item">
+                        <h3>Fonction d'évaluation</h3>
+                        <p>
+                            Évaluation de la pertinence d'une position donnée.
+                        </p>
+                    </article>
+
+                    <article class="exploring-item">
+                        <h3>Optimisation</h3>
+                        <p>
+                            Réduction du coût de recherche grâce à l'élagage.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section cta">
+            <div class="container cta__container">
+
+                <div>
+                    <p class="section-header__eyebrow">Découvrir davantage</p>
+                    <h2>Voir tous mes projets</h2>
+                    <p>
+                        Explorez les autres réalisations présentées dans mon portfolio.
+                    </p>
+                </div>
+
+                <a href="../pages/projets.html" class="btn btn--primary">
+                    Tous les projets
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="site-footer__container container">
+
+            <div class="site-footer__brand">
+                <a href="../index.html" class="navbar__logo">
+                    AD
+                </a>
+                <p>
+                    Étudiant ingénieur en informatique spécialisé en
+                    Intelligence Artificielle.
+                </p>
+            </div>
+
+            <div class="site-footer__links">
+                <a href="../index.html">Accueil</a>
+                <a href="../pages/a-propos.html">À propos</a>
+                <a href="../pages/services.html">Services</a>
+                <a href="../pages/projets.html">Projets</a>
+                <a href="../pages/articles.html">Articles</a>
+                <a href="../pages/contact.html">Contact</a>
+            </div>
+
+            <div class="site-footer__socials">
+                <a href="https://github.com/engineerdiallo" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/engineer-diallo" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+                <a href="mailto:engineerdiallo@gmail.com">Email</a>
+            </div>
+
+        </div>
+
+        <div class="site-footer__bottom container">
+            <p>
+                © <span data-current-year></span>
+                Abdoulaye Diallo. Tous droits réservés.
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/projects.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

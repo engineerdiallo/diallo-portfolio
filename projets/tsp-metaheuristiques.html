@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Projet de résolution du problème du voyageur de commerce avec différentes métaheuristiques — Abdoulaye Diallo.">
+    <meta name="author" content="Abdoulaye Diallo">
+
+    <title>TSP & Métaheuristiques — Abdoulaye Diallo</title>
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="navbar" id="main-navigation" aria-label="Navigation principale">
+            <div class="navbar__container container">
+
+                <a href="../index.html" class="navbar__logo">
+                    AD
+                </a>
+
+                <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+                    aria-label="Ouvrir le menu">
+                    ☰
+                </button>
+
+                <div class="navbar__menu" id="primary-navigation">
+
+                    <a href="../index.html" class="navbar__link">
+                        Accueil
+                    </a>
+
+                    <a href="../pages/a-propos.html" class="navbar__link">
+                        À propos
+                    </a>
+
+                    <a href="../pages/services.html" class="navbar__link">
+                        Services
+                    </a>
+
+                    <a href="../pages/projets.html" class="navbar__link is-active" aria-current="page">
+                        Projets
+                    </a>
+
+                    <a href="../pages/articles.html" class="navbar__link">
+                        Articles
+                    </a>
+
+                    <a href="../pages/contact.html" class="navbar__link">
+                        Contact
+                    </a>
+
+                    <a href="../assets/documents/CV.pdf" class="btn btn--small btn--primary" target="_blank"
+                        rel="noopener">
+                        Mon CV
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="section">
+            <div class="container">
+
+                <header class="section-header">
+                    <p class="section-header__eyebrow">
+                        Optimisation algorithmique
+                    </p>
+
+                    <h1 class="section-header__title">
+                        Problème du voyageur de commerce avec des métaheuristiques
+                    </h1>
+
+                    <p class="section-header__description">
+                        Étude et implémentation de plusieurs stratégies de
+                        recherche pour résoudre un problème d'optimisation
+                        combinatoire.
+                    </p>
+                </header>
+
+                <div class="project-featured">
+
+                    <div class="project-featured__image">
+                        <img src="../assets/images/projects/tsp/AG.png" alt="Aperçu du projet TSP">
+                    </div>
+
+                    <div class="project-featured__content">
+
+                        <span class="badge badge--primary">
+                            Python
+                        </span>
+
+                        <h2>
+                            Optimiser une tournée de villes
+                        </h2>
+
+                        <p>
+                            Le problème du voyageur de commerce consiste à
+                            déterminer une tournée permettant de visiter un
+                            ensemble de villes tout en minimisant la distance
+                            totale parcourue.
+                        </p>
+
+                        <div class="project-card__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Optimisation</span>
+                            <span class="tag">Métaheuristiques</span>
+                            <span class="tag">Algorithme Génétique</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section section-highlight">
+            <div class="container">
+
+                <header class="section-header">
+                    <p class="section-header__eyebrow">Le problème</p>
+                    <h2 class="section-header__title">
+                        Pourquoi utiliser des métaheuristiques ?
+                    </h2>
+                </header>
+
+                <div class="about__content">
+
+                    <p>
+                        Le nombre de solutions possibles augmente très rapidement
+                        avec le nombre de villes. Une recherche exhaustive devient
+                        donc rapidement coûteuse.
+                    </p>
+
+                    <p>
+                        Le projet consiste à étudier différentes stratégies
+                        capables d'explorer efficacement l'espace des solutions
+                        afin de trouver de bonnes solutions dans un temps
+                        raisonnable.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <header class="section-header">
+                    <p class="section-header__eyebrow">Méthodes étudiées</p>
+                    <h2 class="section-header__title">
+                        Plusieurs stratégies de recherche
+                    </h2>
+                </header>
+
+                <div class="cards-grid cards-grid--3">
+
+                    <article class="service-card">
+                        <div class="service-card__icon">01</div>
+                        <h3 class="service-card__title">Hill Climbing</h3>
+                        <p class="service-card__description">
+                            Amélioration progressive d'une solution en explorant
+                            son voisinage.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">02</div>
+                        <h3 class="service-card__title">Algorithme génétique</h3>
+                        <p class="service-card__description">
+                            Évolution d'une population de solutions à travers
+                            sélection, croisement et mutation.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">03</div>
+                        <h3 class="service-card__title">Recherche tabou</h3>
+                        <p class="service-card__description">
+                            Exploration de nouvelles solutions en évitant
+                            temporairement certaines configurations déjà visitées.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">04</div>
+                        <h3 class="service-card__title">Recherche locale</h3>
+                        <p class="service-card__description">
+                            Exploration ciblée du voisinage d'une solution
+                            courante.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">05</div>
+                        <h3 class="service-card__title">Recherche aléatoire</h3>
+                        <p class="service-card__description">
+                            Génération et comparaison de différentes solutions
+                            candidates.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">06</div>
+                        <h3 class="service-card__title">Recuit simulé</h3>
+                        <p class="service-card__description">
+                            Acceptation contrôlée de solutions moins bonnes afin
+                            d'éviter certains minima locaux.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section section-highlight">
+            <div class="container">
+
+                <header class="section-header">
+                    <p class="section-header__eyebrow">Bilan</p>
+                    <h2 class="section-header__title">
+                        Ce que le projet permet d'étudier
+                    </h2>
+                </header>
+
+                <div class="exploring-grid">
+
+                    <article class="exploring-item">
+                        <h3>Qualité des solutions</h3>
+                        <p>
+                            Comparer les solutions obtenues selon leur coût total.
+                        </p>
+                    </article>
+
+                    <article class="exploring-item">
+                        <h3>Temps d'exécution</h3>
+                        <p>
+                            Observer le compromis entre qualité et temps de calcul.
+                        </p>
+                    </article>
+
+                    <article class="exploring-item">
+                        <h3>Exploration</h3>
+                        <p>
+                            Comprendre les mécanismes permettant d'explorer un
+                            espace de solutions complexe.
+                        </p>
+                    </article>
+
+                    <article class="exploring-item">
+                        <h3>Optimisation</h3>
+                        <p>
+                            Étudier les avantages et limites de différentes
+                            stratégies heuristiques.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section cta">
+            <div class="container cta__container">
+
+                <div>
+                    <p class="section-header__eyebrow">Projet suivant</p>
+                    <h2>Othello avec Minimax</h2>
+                    <p>
+                        Découvrez un autre projet consacré aux algorithmes
+                        d'intelligence artificielle.
+                    </p>
+                </div>
+
+                <a href="othello.html" class="btn btn--primary">
+                    Voir Othello
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="site-footer__container container">
+
+            <div class="site-footer__brand">
+                <a href="../index.html" class="navbar__logo">
+                    AD
+                </a>
+
+                <p>
+                    Étudiant ingénieur en informatique spécialisé en
+                    Intelligence Artificielle.
+                </p>
+            </div>
+
+            <div class="site-footer__links">
+                <a href="../index.html">Accueil</a>
+                <a href="../pages/a-propos.html">À propos</a>
+                <a href="../pages/services.html">Services</a>
+                <a href="../pages/projets.html">Projets</a>
+                <a href="../pages/articles.html">Articles</a>
+                <a href="../pages/contact.html">Contact</a>
+            </div>
+
+            <div class="site-footer__socials">
+                <a href="https://github.com/engineerdiallo" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+                <a href="https://www.linkedin.com/in/engineer-diallo" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+                <a href="mailto:engineerdiallo@gmail.com">
+                    Email
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-footer__bottom container">
+            <p>
+                © <span data-current-year></span>
+                Abdoulaye Diallo. Tous droits réservés.
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/projects.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

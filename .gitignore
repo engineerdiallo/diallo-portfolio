@@ -1,0 +1,81 @@
+# ==============================
+
+# Système d'exploitation
+
+# ==============================
+
+# Windows
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+
+.DS_Store
+
+# Linux
+
+*~
+
+# ==============================
+
+# Éditeurs / IDE
+
+# ==============================
+
+# Visual Studio Code
+
+.vscode/
+
+# JetBrains
+
+.idea/
+
+# ==============================
+
+# Fichiers temporaires
+
+# ==============================
+
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+
+# ==============================
+
+# Environnement Python
+
+# ==============================
+
+# Si Python est utilisé localement pour des scripts/outils
+
+venv/
+.venv/
+env/
+**pycache**/
+*.py[cod]
+
+# ==============================
+
+# Fichiers système / locaux
+
+# ==============================
+
+*.local
+.env
+.env.*
+!.env.example
+
+# ==============================
+
+# Builds / distributions
+
+# ==============================
+
+dist/
+build/
+.cache/

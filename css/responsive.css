@@ -1,0 +1,425 @@
+/* =========================================================
+   RESPONSIVE.CSS
+   Adaptation du portfolio aux différentes tailles d'écran
+========================================================= */
+
+
+/* =========================================================
+   1. PETITS ÉCRANS — MOBILE
+   Jusqu'à 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    :root {
+        --container-padding: 16px;
+    }
+
+
+    /* -----------------------------------------------------
+       TYPOGRAPHIE
+    ----------------------------------------------------- */
+
+    .hero__title {
+        font-size: 2.35rem;
+        line-height: 1.12;
+    }
+
+    .hero__subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero__description {
+        font-size: var(--font-size-md);
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
+
+    .hero {
+        min-height: auto;
+        padding-block: var(--spacing-16);
+    }
+
+    .hero__skills {
+        gap: var(--spacing-2);
+    }
+
+    .hero__skills span {
+        padding: 6px 10px;
+        font-size: var(--font-size-xs);
+    }
+
+    .hero__image-wrapper {
+        width: min(100%, 300px);
+    }
+
+
+    /* -----------------------------------------------------
+       SECTIONS
+    ----------------------------------------------------- */
+
+    .section {
+        padding-block: var(--spacing-16);
+    }
+
+    .section-header__title {
+        margin-bottom: var(--spacing-4);
+    }
+
+    .section-header__description {
+        font-size: var(--font-size-sm);
+    }
+
+
+    /* -----------------------------------------------------
+       BOUTONS
+    ----------------------------------------------------- */
+
+    .btn {
+        min-height: 46px;
+        padding-inline: var(--spacing-5);
+    }
+
+
+    /* -----------------------------------------------------
+       CARTES
+    ----------------------------------------------------- */
+
+    .service-card,
+    .skill-card,
+    .exploring-item {
+        padding: var(--spacing-5);
+    }
+
+    .project-card__content {
+        padding: var(--spacing-5);
+    }
+
+
+    /* -----------------------------------------------------
+       ABOUT
+    ----------------------------------------------------- */
+
+    .about__image img {
+        aspect-ratio: 1 / 1;
+    }
+
+
+    /* -----------------------------------------------------
+       PROJECT FEATURED
+    ----------------------------------------------------- */
+
+    .project-featured__image {
+        min-height: 200px;
+    }
+
+    .project-featured__content {
+        padding: var(--spacing-5);
+    }
+
+
+    /* -----------------------------------------------------
+       TIMELINE
+    ----------------------------------------------------- */
+
+    .timeline__item {
+        grid-template-columns: 20px 1fr;
+        gap: var(--spacing-3);
+    }
+
+    .timeline__marker {
+        width: 20px;
+    }
+
+
+    /* -----------------------------------------------------
+       GOALS
+    ----------------------------------------------------- */
+
+    .goals__container {
+        padding: var(--spacing-5);
+    }
+
+
+    /* -----------------------------------------------------
+       CTA
+    ----------------------------------------------------- */
+
+    .cta__container {
+        padding: var(--spacing-8) var(--spacing-5);
+        border-radius: var(--radius-lg);
+    }
+
+    .cta__container p {
+        font-size: var(--font-size-md);
+    }
+
+    .cta__container .btn {
+        width: 100%;
+        margin: var(--spacing-1) 0;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTACT
+    ----------------------------------------------------- */
+
+    .contact-form {
+        padding: var(--spacing-5);
+    }
+
+    .contact-link {
+        padding: var(--spacing-3);
+    }
+
+    .contact-link__value {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
+
+    .site-footer__container {
+        padding-block: var(--spacing-10);
+    }
+}
+
+
+/* =========================================================
+   2. MOBILE LARGE
+   481px → 767px
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .hero {
+        padding-block: var(--spacing-20);
+    }
+
+    .hero__image-wrapper {
+        width: min(100%, 360px);
+    }
+
+    .project-featured__image {
+        min-height: 260px;
+    }
+}
+
+
+/* =========================================================
+   3. TABLETTES
+   768px → 1023px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    :root {
+        --container-padding: 24px;
+    }
+
+
+    /* -----------------------------------------------------
+       NAVIGATION
+    ----------------------------------------------------- */
+
+    .navbar__container {
+        position: relative;
+    }
+
+    .navbar__menu.is-open {
+        position: absolute;
+
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+
+        padding: var(--spacing-4);
+
+        border: var(--border-width) solid var(--color-border);
+        border-top: 0;
+
+        background-color: var(--color-surface);
+
+        box-shadow: var(--shadow-md);
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
+
+    .hero {
+        min-height: auto;
+        padding-block: var(--spacing-20);
+    }
+
+    .hero__container {
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 0.7fr);
+        gap: var(--spacing-8);
+    }
+
+    .hero__title {
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+    }
+
+    .hero__image-wrapper {
+        width: min(100%, 340px);
+    }
+
+
+    /* -----------------------------------------------------
+       ABOUT
+    ----------------------------------------------------- */
+
+    .about__container {
+        grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1.3fr);
+        gap: var(--spacing-8);
+    }
+
+
+    /* -----------------------------------------------------
+       PROJECTS
+    ----------------------------------------------------- */
+
+    .project-featured {
+        grid-template-columns: 1fr;
+    }
+
+    .project-featured__image {
+        min-height: 320px;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTACT
+    ----------------------------------------------------- */
+
+    .contact__container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        max-width: 760px;
+    }
+}
+
+
+/* =========================================================
+   4. DESKTOP
+   1024px → 1279px
+========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+    .navbar__menu {
+        gap: 0;
+    }
+
+    .navbar__link {
+        padding-inline: var(--spacing-2);
+        font-size: var(--font-size-xs);
+    }
+
+    .hero__container {
+        gap: var(--spacing-10);
+    }
+
+    .hero__title {
+        font-size: clamp(3rem, 5vw, 4rem);
+    }
+}
+
+
+/* =========================================================
+   5. GRANDS ÉCRANS
+   À partir de 1280px
+========================================================= */
+
+@media (min-width: 1280px) {
+
+    .hero__container {
+        gap: var(--spacing-16);
+    }
+
+    .hero__image-wrapper {
+        width: 440px;
+    }
+
+    .section-header {
+        margin-bottom: var(--spacing-16);
+    }
+
+    .project-card__content {
+        padding: var(--spacing-8);
+    }
+}
+
+
+/* =========================================================
+   6. TRÈS GRANDS ÉCRANS
+   À partir de 1440px
+========================================================= */
+
+@media (min-width: 1440px) {
+
+    :root {
+        --container-width: 1280px;
+    }
+
+    .hero {
+        min-height: calc(100vh - 72px);
+    }
+
+    .hero__title {
+        font-size: 4.5rem;
+    }
+}
+
+
+/* =========================================================
+   7. ACCESSIBILITÉ — RÉDUCTION DES ANIMATIONS
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .btn:hover,
+    .card:hover,
+    .service-card:hover,
+    .project-card:hover,
+    .exploring-item:hover,
+    .contact-link:hover,
+    .social-link:hover {
+        transform: none;
+    }
+
+    .project-card:hover .project-card__image img {
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   8. ÉCRANS TRÈS PETITS / HAUTEUR LIMITÉE
+========================================================= */
+
+@media (max-height: 600px) and (orientation: landscape) {
+
+    .hero {
+        min-height: auto;
+        padding-block: var(--spacing-12);
+    }
+
+    .hero__container {
+        gap: var(--spacing-8);
+    }
+
+    .hero__image-wrapper {
+        width: min(100%, 260px);
+    }
+}
