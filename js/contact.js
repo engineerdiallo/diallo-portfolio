@@ -1,7 +1,8 @@
 
 /* =========================================================
    CONTACT.JS
-   Validation et gestion du formulaire de contact
+   Validation du formulaire de contact
+   Envoi réel assuré par Formspree
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -80,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       FONCTION : AFFICHER LE STATUT
+       FONCTION : AFFICHER LE STATUT LOCAL
     ====================================================== */
 
     const showStatus = (message, type) => {
@@ -94,15 +95,28 @@ document.addEventListener("DOMContentLoaded", () => {
         status.className = "contact-form__status";
         status.classList.add("is-visible");
 
-        if (type === "success") {
-            status.classList.add("contact-form__status--success");
-        }
 
         if (type === "error") {
             status.classList.add("contact-form__status--error");
         }
 
-        status.setAttribute("role", "status");
+        status.setAttribute(
+            "role",
+            type === "error" ? "alert" : "status"
+        );
+    };
+
+
+
+    /* ===================================================== 
+        FONCTION : EFFACER LE STATUT LOCAL 
+    ====================================================== */
+    const clearStatus = () => {
+        if (!status) {
+            return;
+        }
+        status.textContent = "";
+        status.className = "contact-form__status";
     };
 
 
@@ -256,6 +270,7 @@ document.addEventListener("DOMContentLoaded", () => {
              */
 
             clearError(input);
+            clearStatus();
 
         });
 
@@ -278,30 +293,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       SOUMISSION DU FORMULAIRE
+       VALIDATION AVANT ENVOI
     ====================================================== */
 
     form.addEventListener("submit", (event) => {
 
-        event.preventDefault();
-
-        /*
-         * On masque l'ancien message de statut.
-         */
-
-        if (status) {
-            status.className = "contact-form__status";
-            status.textContent = "";
-        }
-
-
-        /*
-         * Validation.
-         */
+        clearStatus();
 
         const isValid = validateForm();
 
         if (!isValid) {
+
+            event.preventDefault();
 
             showStatus(
                 "Veuillez corriger les champs indiqués.",
@@ -324,26 +327,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        /*
-         * V1 statique :
-         * aucune donnée n'est réellement envoyée à un serveur.
-         */
-
-        showStatus(
-            "Votre message est valide. L'envoi réel sera connecté prochainement.",
-            "success"
-        );
-
-
-        /*
-         * Pour le moment, on réinitialise le formulaire
-         * après validation.
-         *
-         * Cette partie pourra être supprimée lorsque
-         * l'envoi vers un backend sera implémenté.
-         */
-
-        form.reset();
+        /* 
+         Les données sont valides. 
+         IMPORTANT : 
+         On ne fait PAS event.preventDefault(). 
+         
+         @formspree/ajax peut donc prendre en charge 
+         l'envoi réel vers Formspree. 
+        */
 
     });
 

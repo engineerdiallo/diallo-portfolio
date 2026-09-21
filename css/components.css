@@ -708,3 +708,30 @@
 .image-error {
     opacity: 0.5;
 }
+
+
+/* ==========================================================
+   CSS — statuts Formspree
+============================================================= */
+
+.contact-form__status[data-fs-success] {
+    display: block;
+    margin-top: var(--spacing-2);
+}
+
+.contact-form__status[data-fs-error] {
+    display: block;
+    margin-top: var(--spacing-2);
+}
+
+/* ==========================================================
+   CSS du honeypot anti-spam
+============================================================= */
+
+.form-honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -164,7 +165,8 @@
                     <!-- FORMULAIRE -->
                     <div class="contact-form-wrapper">
 
-                        <form class="contact-form" id="contact-form" novalidate>
+                        <form class="contact-form" id="contact-form" action=" https://formspree.io/f/xaenyzbl"
+                            method="post" accept-charset="UTF-8" novalidate>
 
                             <div class="form-group">
 
@@ -173,7 +175,7 @@
                                 </label>
 
                                 <input type="text" id="name" name="name" autocomplete="name" placeholder="Votre nom"
-                                    required aria-required="true">
+                                    required aria-required="true" data-fs-field>
 
                             </div>
 
@@ -184,7 +186,7 @@
                                 </label>
 
                                 <input type="email" id="email" name="email" autocomplete="email"
-                                    placeholder="vous@example.com" required aria-required="true">
+                                    placeholder="vous@example.com" required aria-required="true" data-fs-field>
 
                             </div>
 
@@ -195,7 +197,7 @@
                                 </label>
 
                                 <input type="text" id="subject" name="subject" placeholder="Objet de votre message"
-                                    required aria-required="true">
+                                    required aria-required="true" data-fs-field>
 
                             </div>
 
@@ -207,9 +209,21 @@
 
                                 <textarea id="message" name="message" rows="7"
                                     placeholder="Décrivez votre projet, votre besoin ou votre demande..." required
-                                    aria-required="true"></textarea>
+                                    aria-required="true" data-fs-field></textarea>
 
                             </div>
+
+                            <!-- Honeypot anti-spam -->
+
+                            <div class="form-honeypot" aria-hidden="true">
+                                <label for="website">
+                                    Ne pas remplir ce champ
+                                </label>
+
+                                <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+
+                            </div>
+
 
                             <button type="submit" class="btn btn--primary">
                                 Envoyer le message
@@ -217,6 +231,10 @@
 
                             <div class="contact-form__status" id="contact-form-status" role="status" aria-live="polite">
                             </div>
+
+                            <div class="contact-form__status" data-fs-success role="status" aria-live="polite"></div>
+
+                            <div class="contact-form__status" data-fs-error role="alert" aria-live="assertive"></div>
 
                         </form>
 
@@ -407,6 +425,25 @@
     <script src="../js/navigation.js"></script>
     <script src="../js/contact.js"></script>
     <script src="../js/main.js"></script>
+
+
+    <!-- Formspree AJAX -->
+
+    <script>
+        window.formspree =
+            window.formspree ||
+            function () {
+                (formspree.q = formspree.q || []).push(arguments);
+            }
+
+        formspree("initForm", {
+            formElement: "#contact-form",
+            formId: "xaenyzbl"
+        }) 
+    </script>
+
+    <script src="https://unpkg.com/@formspree/ajax@1" defer>
+    </script>
 
 </body>
 

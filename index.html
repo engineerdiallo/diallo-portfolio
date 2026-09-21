@@ -511,7 +511,7 @@
                         </h3>
 
                         <p>
-                            Analyse d'un problème et exploration de soultions
+                            Analyse d'un problème et exploration de solutions
                             basées sur le Machine Learning lorsque cette
                             approche est pertinente.
                         </p>
@@ -1126,7 +1126,8 @@
 
                 </div>
 
-                <form class="contact-form" id="contact-form" action="#" method="post" novalidate>
+                <form class="contact-form" id="contact-form" action=" https://formspree.io/f/xaenyzbl" method="post"
+                    accept-charset="UTF-8" novalidate>
 
                     <div class="form-group">
 
@@ -1171,11 +1172,28 @@
                     </div>
 
 
+                    <!-- Honeypot anti-spam -->
+
+                    <div class="form-honeypot" aria-hidden="true">
+                        <label for="website">
+                            Ne pas remplir ce champ
+                        </label>
+
+                        <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+
+                    </div>
+
+
                     <button type="submit" class="btn btn--primary">
                         Envoyer le message
                     </button>
 
-                    <p class="contact-form__status" id="contact-form-status" aria-live="polite"></p>
+                    <div class="contact-form__status" id="contact-form-status" role="status" aria-live="polite">
+                    </div>
+
+                    <div class="contact-form__status" data-fs-success role="status" aria-live="polite"></div>
+
+                    <div class="contact-form__status" data-fs-error role="alert" aria-live="assertive"></div>
 
                 </form>
 
@@ -1261,6 +1279,24 @@
     <script src="js/projects.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- Formspree AJAX -->
+
+    <script>
+        window.formspree =
+            window.formspree ||
+            function () {
+                (formspree.q = formspree.q || []).push(arguments);
+            }
+
+        formspree("initForm", {
+            formElement: "#contact-form",
+            formId: "xaenyzbl"
+        })
+    </script>
+
+    <script src="https://unpkg.com/@formspree/ajax@1" defer>
+    </script>
 
 </body>
 
